@@ -35,13 +35,9 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('watch', function() {
-  gulp.watch(['sass/**/*.scss', 'sass/mixins/**/*.scss'], ['css'])
-})
-
 gulp.task('build', ['kss','css'])
 
 gulp.task('default', ['kss','css', 'browserSync'], function() {
-  gulp.watch('sass/*', ['css', 'kss'])
+  gulp.watch('src/*/*', ['css', 'kss'])
   gulp.watch('docs/*.html', browserSync.reload)
 })

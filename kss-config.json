@@ -1,11 +1,11 @@
 {
-  "title": "Title of the Style Guide",
-  "source": "sass/",
+  "title": "Rui",
+  "source": "src",
   "destination": "docs/",
   "builder": "template/custom-template/",
   "css": [
-    "/css/rui.min.css"
+    "css/rui.min.css"
   ],
   "js" : [],
-  "homepage": "/styleguide.md"
+  "homepage": "styleguide.md"
 }
