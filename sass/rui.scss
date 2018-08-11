@@ -1,20 +1,21 @@
-// Button
+// Buttons
 //
 // Generates a button
 //
 // Markup:
-//  <button class="button {$modifiers}">Click me</button>
+//  <button class="button {{ modifier_class }}">Click me</button>
 //
 // .button-blue - A blue button.
 // .button-green - A green button.
-// :hover   - Highlights the button on hover.
+// :hover   - Highlights the button on hover. s的 sd  f   ssd 
 //
-// Styleguide 1.1
+// Styleguide 1
+
 .button {
   width: 100px;
   height: 40px;
   border-radius: 5px;
-  background-color: white;
+  background-color: #BADA55;
   border: none;
 }
 

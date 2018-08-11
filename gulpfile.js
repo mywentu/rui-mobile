@@ -4,8 +4,12 @@ const sassGlob = require('gulp-sass-glob')
 const autoprefixer = require('gulp-autoprefixer');
 const minifyCss = require('gulp-minify-css')
 const rename = require('gulp-rename')
-// const gulprev = require('gulp-rev'); 
-var kss = require('gulp-kss');    
+const shell = require('gulp-shell');
+const browserSync = require('browser-sync');
+
+gulp.task('kss', shell.task(
+  ['./node_modules/.bin/kss --config kss-config.json']))
+
 
 gulp.task('css', () => 
   gulp.src('sass/rui.scss')
@@ -22,17 +26,22 @@ gulp.task('css', () =>
   .pipe(gulp.dest('dist/css'))  
 )
 
-gulp.task('styleguide', function () {
-  gulp.src(['sass/rui.scss'])
-      .pipe(kss({
-          overview: 'sass/styleguide.md',
-          templateDirectory: __dirname + '/template/custom-template'
-      }))
-      .pipe(gulp.dest('docs/'))
+gulp.task('browserSync', function() {
+  browserSync({
+    startPath: 'index.html',
+    server: {
+      baseDir: ['docs', 'dist']
+    }
+  })
 })
 
 gulp.task('watch', function() {
   gulp.watch(['sass/**/*.scss', 'sass/mixins/**/*.scss'], ['css'])
 })
 
-gulp.task('default', ['styleguide','css'])
+gulp.task('build', ['kss','css'])
+
+gulp.task('default', ['kss','css', 'browserSync'], function() {
+  gulp.watch('sass/*', ['css', 'kss'])
+  gulp.watch('docs/*.html', browserSync.reload)
+})
