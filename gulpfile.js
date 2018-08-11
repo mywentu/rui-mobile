@@ -26,7 +26,7 @@ gulp.task('styleguide', function () {
   gulp.src(['sass/rui.scss'])
       .pipe(kss({
           overview: 'sass/styleguide.md',
-          templateDirectory: __dirname + '/template/michelangelo'
+          templateDirectory: __dirname + '/template/custom-template'
       }))
       .pipe(gulp.dest('docs/'))
 })
@@ -35,4 +35,4 @@ gulp.task('watch', function() {
   gulp.watch(['sass/**/*.scss', 'sass/mixins/**/*.scss'], ['css'])
 })
 
-gulp.task('default', ['css', 'styleguide'])
+gulp.task('default', ['styleguide','css'])
