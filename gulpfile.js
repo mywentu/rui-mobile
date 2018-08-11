@@ -12,7 +12,7 @@ gulp.task('kss', shell.task(
 
 
 gulp.task('css', () => 
-  gulp.src('sass/rui.scss')
+  gulp.src('src/sass/rui.scss')
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
@@ -35,9 +35,9 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('build', ['kss','css'])
+gulp.task('build', ['css', ])
 
-gulp.task('default', ['kss','css', 'browserSync'], function() {
-  gulp.watch('src/*/*', ['css', 'kss'])
+gulp.task('default', ['css'], function() {
+  gulp.watch('src/*/*', ['css'])
   gulp.watch('docs/*.html', browserSync.reload)
 })
