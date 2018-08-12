@@ -1,0 +1,23 @@
+
+// 1. 默认关闭页面滚动条
+@include root-scroll;
+// 1. 防止用户自定义网页背景及文字颜色、大小影响
+html {
+  font-size: $font-size-root;
+  color: $color;
+  background-color: $doc-bgcolor;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+a {
+  color: $link-color;
+}
+
+
+// @include ruifont; // font配置

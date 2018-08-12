@@ -20,7 +20,7 @@ gulp.task('css', () =>
     cascade: true, //是否美化属性值
     remove:true //是否去掉不必要的前缀
   }))
-  .pipe(minifyCss())
+  // .pipe(minifyCss())
   .pipe(rename({suffix: '.min'}))
   // .pipe(gulprev()) // 追加md5
   .pipe(gulp.dest('dist/css'))  

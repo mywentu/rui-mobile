@@ -1,1 +1,182 @@
-@charset "UTF-8";blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif}button,h1,h2,h3,h4,h5,h6,input,select,textarea{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}ol,ul{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}table{border-collapse:collapse;border-spacing:0}
+@charset "UTF-8";
+/**
+ * 框架全局Reset
+ * 重置Mobile及高级浏览器上常见的差异
+ */
+*,
+::before,
+::after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body {
+  margin: 0; }
+
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp {
+  padding: 0;
+  margin: 0; }
+
+input,
+textarea,
+button,
+select,
+pre,
+xmp,
+tt,
+code,
+kbd,
+samp {
+  font-family: inherit;
+  line-height: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+  font-size: inherit; }
+
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+  font-style: normal; }
+
+table {
+  text-align: left;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+ul,
+ol,
+menu {
+  list-style: none; }
+
+fieldset,
+img {
+  vertical-align: middle;
+  border: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "\0020"; }
+
+textarea,
+pre,
+xmp {
+  overflow: auto; }
+
+textarea {
+  resize: vertical; }
+
+input,
+textarea,
+button,
+select a {
+  outline: 0 none; }
+
+input,
+textarea,
+button,
+select {
+  color: inherit; }
+  input:disabled,
+  textarea:disabled,
+  button:disabled,
+  select:disabled {
+    opacity: 1; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+mark {
+  background-color: rgba(0, 0, 0, 0); }
+
+a,
+ins,
+s,
+u,
+del {
+  text-decoration: none; }
+
+a,
+img {
+  -webkit-touch-callout: none; }
+
+.g-clear,
+.g-mod {
+  clear: both; }
+
+html,
+body {
+  height: 100%;
+  overflow: hidden; }
+
+html {
+  font-size: 100px;
+  color: #212121;
+  background-color: #fafafa; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue,Helvetica,STHeiTi,sans-serif";
+  font-size: 14px;
+  line-height: 1.5; }
+
+a {
+  color: #508cf0; }

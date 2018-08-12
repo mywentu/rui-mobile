@@ -1,1 +1,10 @@
-@import 'reset.scss';
+//reset
+@import "reset";
+
+// theme
+@import "theme/normal";
+
+// mixins
+@import "mixins";
+
+@import "root";

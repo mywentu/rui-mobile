@@ -1,0 +1,13 @@
+@mixin root-scroll($is-scroll : false) {
+  html,
+  body {
+    @if $is-scroll {
+      height: auto;
+      overflow: visible;
+    } @else {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+

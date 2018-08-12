@@ -1,52 +1,198 @@
-/*
-Copyright 2010, KISSY UI Library v1.0.8
-MIT Licensed
-build: 871 Jul 19 08:51
-*/
-/*
-KISSY CSS Reset
-理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
-     2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
-     3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
-特色：1. 适应中文；2. 基于最新主流浏览器。
-维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
-*/
+@charset "utf-8";
 
-/** 清除内外边距 **/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
-dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
-pre, /* text formatting elements 文本格式元素 */
-form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
-th, td /* table elements 表格元素 */ {
-    margin: 0;
-    padding: 0;
+/**
+ * 框架全局Reset
+ * 重置Mobile及高级浏览器上常见的差异
+ */
+
+// 1. 将元素的盒模型统一为: border-box
+// 2. 清除元素tap时出现的焦点框
+*,
+::before,
+::after {
+  // @include box-sizing(border-box);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/** 设置默认字体 **/
-body,
-button, input, select, textarea /* for ie */ {
-    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+body {
+  margin: 0;
 }
-h1, h2, h3, h4, h5, h6 { font-size: 100%; }
-address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
-small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
-/** 重置列表元素 **/
-ul, ol { list-style: none; }
+// 1. 清除某些元素在不同浏览器下内外补白不同造成的影响
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp {
+  padding: 0;
+  margin: 0;
+}
 
-/** 重置文本格式元素 **/
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
+input,
+textarea,
+button,
+select,
+pre,
+xmp,
+tt,
+code,
+kbd,
+samp {
+  font-family: inherit;
+  line-height: inherit;
+}
 
-sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
-sub { vertical-align: text-bottom; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+  font-size: inherit;
+}
 
-/** 重置表单元素 **/
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
-button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
-/* 注：optgroup 无法扶正 */
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+  font-style: normal;
+}
 
-/** 重置表格元素 **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  text-align: left;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+fieldset,
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "\0020";
+}
+
+textarea,
+pre,
+xmp {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea,
+button,
+select a {
+  outline: 0 none;
+}
+
+input,
+textarea,
+button,
+select {
+  color: inherit;
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+// input[type="button"],
+// input[type="submit"],
+// input[type="reset"],
+// input[type="file"]::-webkit-file-upload-button,
+// input[type="search"]::-webkit-search-cancel-button {
+//     // @include appearance;
+// }
+
+mark {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a,
+ins,
+s,
+u,
+del {
+  text-decoration: none;
+}
+
+a,
+img {
+  -webkit-touch-callout: none;
+}
+
+
+// 1. 预设清除浮动
+.g-clear,
+.g-mod {
+  clear: both;
+}
