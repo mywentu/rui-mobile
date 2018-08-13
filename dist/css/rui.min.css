@@ -167,13 +167,19 @@ body {
   height: 100%;
   overflow: hidden; }
 
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html {
   font-size: 100px;
   color: #212121;
   background-color: #fafafa; }
 
 body {
-  margin: 0;
   font-family: "Helvetica Neue,Helvetica,STHeiTi,sans-serif";
   font-size: 14px;
   line-height: 1.5; }
