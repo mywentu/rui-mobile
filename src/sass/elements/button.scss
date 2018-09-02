@@ -1,3 +1,14 @@
+// Primary Button
+//
+// Use this class for the primary call to action button.
+// Typically you'll want to use either a `<button>` or an `<a>` element.
+//
+// Markup:
+// <button class="btn btn--primary">Click Me</button>
+// <a href="#" class="btn btn--primary">Click Me</a>
+//
+// Styleguide Components.Buttons.Primary
+
 .#{$prefix}btn {
   display: inline-block;
   color: $btn-color;

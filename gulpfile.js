@@ -39,7 +39,7 @@ gulp.task('build', ['css', ])
 
 
 
-gulp.task('default', ['css'], function() {
+gulp.task('default', ['css', 'kss', 'browserSync'], function() {
   gulp.watch('src/**/*.scss', ['css'])
   gulp.watch('docs/*.html', browserSync.reload)
 })

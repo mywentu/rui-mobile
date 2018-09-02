@@ -1,6 +1,6 @@
 {
   "title": "Rui",
-  "source": "src/sass",
+  "source": "src",
   "destination": "docs/",
   "builder": "template/custom-template/",
   "css": [
