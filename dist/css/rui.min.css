@@ -162,6 +162,7 @@ img {
 .g-mod {
   clear: both; }
 
+/* border */
 html,
 body {
   height: 100%;
@@ -186,3 +187,15 @@ body {
 
 a {
   color: #508cf0; }
+
+.rui-btn {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }

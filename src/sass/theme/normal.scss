@@ -32,3 +32,33 @@ $link-hover-color:     #6298f2 !default; // 链接经过色
 
 // box-sizing
 $box-sizing:             border-box !default;
+
+//
+// btn
+//
+
+$btn-border-width: 1px !default;
+$btn-border-color: #508cf0 !default;
+$btn-bgcolor: #508cf0 !default;
+$btn-color: #fff !default;
+
+$btn-active-border-color: #407fd3 !default;
+$btn-active-bgcolor: #407fd3 !default;
+$btn-active-color: #fff !default;
+
+$btn-padding: .1rem 0 !default; // todo
+$btn-radius: .04rem !default;
+
+$btn-font-size: .16rem !default;
+$btn-font-weight: null !default;
+$btn-width: null !default;
+$btn-height:null !default;
+// samll
+$btn-s-height: .28rem !default;
+$btn-s-font-size: .12rem !default;
+// medium
+$btn-m-height: .36rem !default;
+$btn-m-font-size: .14rem !default;
+// large
+$btn-l-height: .44rem !default;
+$btn-l-font-size: .15rem !default;

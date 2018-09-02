@@ -37,7 +37,9 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', ['css', ])
 
+
+
 gulp.task('default', ['css'], function() {
-  gulp.watch('src/*/*', ['css'])
+  gulp.watch('src/**/*.scss', ['css'])
   gulp.watch('docs/*.html', browserSync.reload)
 })

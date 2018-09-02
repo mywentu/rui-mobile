@@ -1,3 +1,9 @@
 .#{$prefix}btn {
-  
+  display: inline-block;
+  color: $btn-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
 }
