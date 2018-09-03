@@ -40,6 +40,6 @@ gulp.task('build', ['css', ])
 
 
 gulp.task('default', ['css', 'kss', 'browserSync'], function() {
-  gulp.watch('src/**/*.scss', ['css'])
+  gulp.watch('src/**/*.scss', ['css', 'kss'])
   gulp.watch('docs/*.html', browserSync.reload)
 })

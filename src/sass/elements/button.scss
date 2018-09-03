@@ -1,20 +1,38 @@
-// Primary Button
+// 按钮
 //
-// Use this class for the primary call to action button.
-// Typically you'll want to use either a `<button>` or an `<a>` element.
+//
+// Style guide: 组件.按钮
+
+// 默认按钮
 //
 // Markup:
-// <button class="btn btn--primary">Click Me</button>
-// <a href="#" class="btn btn--primary">Click Me</a>
+// <button class="rui-btn">默认按钮</button>
 //
-// Styleguide Components.Buttons.Primary
+// Styleguide 组件.按钮.默认
 
-.#{$prefix}btn {
+.#{$prefix}btn { // 此处做了修改，因为rui-btn及可用，不需要个其他class组合使用
   display: inline-block;
+  padding: $btn-padding;
+  line-height: 1;
   color: $btn-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
+  background-color: $btn-bgcolor;
+  border-radius: $btn-radius;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include onepx-border(#ddd, $btn-radius, 1px, 1px, 1px, 1px);
+  &:active { // ios active 会失效，暂用在body上加 ontouchstart 时期工作
+    color: $btn-active-color;
+    background-color: $btn-active-bgcolor;
+    &::after {
+      border: $btn-active-border-color;
+    }
+  }
+  &-disabled {
+    opacity: 1;
+    cursor: not-allowed;
+  }
 }

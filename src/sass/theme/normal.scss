@@ -39,14 +39,14 @@ $box-sizing:             border-box !default;
 
 $btn-border-width: 1px !default;
 $btn-border-color: #508cf0 !default;
-$btn-bgcolor: #508cf0 !default;
-$btn-color: #fff !default;
+$btn-bgcolor: #fff !default;
+$btn-color: #4b4b4b !default;
 
-$btn-active-border-color: #407fd3 !default;
-$btn-active-bgcolor: #407fd3 !default;
+$btn-active-border-color: #bbb !default;
+$btn-active-bgcolor: #bbb !default;
 $btn-active-color: #fff !default;
 
-$btn-padding: .1rem 0 !default; // todo
+$btn-padding: .1rem .1rem !default; // todo
 $btn-radius: .04rem !default;
 
 $btn-font-size: .16rem !default;

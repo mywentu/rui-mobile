@@ -248,7 +248,7 @@
       "fill",
       "stroke"
     ],
-    "property-no-vendor-prefix": true,
+    "property-no-vendor-prefix": false,
     "rule-empty-line-before": null,
     "scss/dollar-variable-default": [true, { "ignore": "local" }],
     "selector-attribute-quotes": "always",

@@ -162,7 +162,6 @@ img {
 .g-mod {
   clear: both; }
 
-/* border */
 html,
 body {
   height: 100%;
@@ -190,7 +189,9 @@ a {
 
 .rui-btn {
   display: inline-block;
-  color: #fff;
+  padding: 0.1rem 0.1rem;
+  line-height: 1;
+  color: #4b4b4b;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -198,4 +199,66 @@ a {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  background-color: #fff;
+  -webkit-border-radius: 0.04rem;
+     -moz-border-radius: 0.04rem;
+          border-radius: 0.04rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .rui-btn {
+    border: none;
+    position: relative; }
+  .rui-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    -webkit-transform-origin: left top;
+       -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+         -o-transform-origin: left top;
+            transform-origin: left top; }
+    @media screen and (-webkit-min-device-pixel-ratio: 1) {
+      .rui-btn::after {
+        width: 100%;
+        height: 100%;
+        -webkit-border-radius: 0.04rem;
+           -moz-border-radius: 0.04rem;
+                border-radius: 0.04rem; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      .rui-btn::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+           -moz-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+             -o-transform: scale(0.5);
+                transform: scale(0.5);
+        -webkit-border-radius: 0.08rem;
+           -moz-border-radius: 0.08rem;
+                border-radius: 0.08rem; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      .rui-btn::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+           -moz-transform: scale(0.33333);
+            -ms-transform: scale(0.33333);
+             -o-transform: scale(0.33333);
+                transform: scale(0.33333);
+        -webkit-border-radius: 0.12rem;
+           -moz-border-radius: 0.12rem;
+                border-radius: 0.12rem; } }
+  .rui-btn:active {
+    color: #fff;
+    background-color: #bbb; }
+    .rui-btn:active::after {
+      border: #bbb; }
+  .rui-btn-disabled {
+    opacity: 1;
+    cursor: not-allowed; }
