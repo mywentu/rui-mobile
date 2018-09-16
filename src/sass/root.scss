@@ -1,6 +1,5 @@
-
-// 1. 默认关闭页面滚动条
-@include root-scroll;
+// 1. 是否关闭页面滚动条
+@include root-scroll(true);
 
 // 2. 默认关闭页面滚动条
 // @include ruifont; // font配置

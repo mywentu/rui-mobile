@@ -6,33 +6,98 @@
 // 默认按钮
 //
 // Markup:
-// <button class="rui-btn">默认按钮</button>
+// <a class="rui-btn">默认按钮</a>
 //
-// Styleguide 组件.按钮.默认
+// Styleguide 组件.按钮.1
 
-.#{$prefix}btn { // 此处做了修改，因为rui-btn及可用，不需要个其他class组合使用
-  display: inline-block;
+// 禁止按钮
+//
+// Markup:
+// <a class="rui-btn rui-btn-disabled">禁止按钮</a>
+//
+// Styleguide 组件.按钮.2
+
+// Primary按钮
+//
+// Markup:
+// <a class="rui-btn rui-btn-primary">Primary按钮</a>
+//
+// Styleguide 组件.按钮.3
+
+// Success
+//
+// Markup:
+// <a class="rui-btn rui-btn-success">Success按钮</a>
+//
+// Styleguide 组件.按钮.4
+
+// Small
+//
+// Markup:
+// <a class="rui-btn rui-btn-s">Small按钮</a>
+// <a class="rui-btn rui-btn-disabled rui-btn-s">Small按钮</a>
+//
+// Styleguide 组件.按钮.5
+
+.#{$prefix}btn {
+  // 此处做了修改，因为rui-btn及可用，不需要个其他class组合使用
+  display: block;
+  font-size: $btn-font-size;
+  outline: none;
   padding: $btn-padding;
-  line-height: 1;
+  // line-height: 1;
   color: $btn-color;
   text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
   cursor: pointer;
   user-select: none;
   background-color: $btn-bgcolor;
   border-radius: $btn-radius;
+  -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  @include onepx-border(#ddd, $btn-radius, 1px, 1px, 1px, 1px);
-  &:active { // ios active 会失效，暂用在body上加 ontouchstart 时期工作
+
+  @include onepx-border($btn-active-border-color, $btn-radius, 1px, 1px, 1px, 1px);
+
+  &:active {
+    // ios active 会失效，暂用在body上加 ontouchstart 属性使其工作
     color: $btn-active-color;
     background-color: $btn-active-bgcolor;
-    &::after {
-      border: $btn-active-border-color;
+  }
+
+  &-primary {
+    color: $btn-primary-color;
+    background-color: $btn-primary-bgcolor;
+
+    &:active {
+      color: lighten($btn-primary-color, 40%);
+      background-color: lighten($btn-primary-bgcolor, 15%);
     }
   }
+
+  &-success {
+    color: $btn-success-color;
+    background-color: $btn-success-bgcolor;
+
+    &:active {
+      color: lighten($btn-success-color, 40%);
+      background-color: lighten($btn-success-bgcolor, 15%);
+    }
+  }
+
+  &-s {
+    display: inline-block;
+    font-size: $btn-s-font-size;
+  }
+
   &-disabled {
     opacity: 1;
     cursor: not-allowed;
+    @include onepx-border(lighten($btn-active-border-color, 12%), $btn-radius, 1px, 1px, 1px, 1px);
+
+    &,
+    &:active {
+      color: lighten($btn-color, 40%);
+      background-color: lighten($btn-bgcolor, 15%);
+    }
   }
 }
