@@ -92,6 +92,7 @@
   &-disabled {
     opacity: 1;
     cursor: not-allowed;
+
     @include onepx-border(lighten($btn-active-border-color, 12%), $btn-radius, 1px, 1px, 1px, 1px);
 
     &,

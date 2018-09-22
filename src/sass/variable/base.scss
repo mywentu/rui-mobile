@@ -1,0 +1,18 @@
+$prefix: "rui-" !default;
+
+// root字号类型：normal | scaling
+// normal表示root字号使用 `font-size-root`
+// scaling表示root字号使用 `font-size-root-scaling`
+$responsive-type: normal !default;
+
+// box-sizing
+$box-sizing: border-box !default;
+
+// font
+$font-size-root: 100px !default; // html root使用100px，方便rem单位的换算
+$font-size-root-scaling: 31.25vw !default; // 适配：用于做元素随屏幕大小而变化的情况
+$font-size: 14px !default;
+$font-size-baseline: .14rem !default; // 基准字号，随root改变而变
+$font-family: "Helvetica Neue,Helvetica,STHeiTi,sans-serif" !default; // font-family
+$line-height: 1.5 !default; // line-height
+

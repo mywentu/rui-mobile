@@ -2,7 +2,7 @@
 @import "reset";
 
 // theme
-@import "theme/normal";
+@import "./variable/*";
 
 // mixins
 @import "mixins";
@@ -10,6 +10,5 @@
 // root config
 @import "root";
 
-
 // ele css
-@import "./elements/*"
+@import "./elements/*";

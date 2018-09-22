@@ -1,0 +1,38 @@
+//
+// btn
+//
+
+$btn-border-width: 1px !default;
+$btn-border-color: #508cf0 !default;
+
+$btn-bgcolor: #fff !default;
+$btn-color: #4b4b4b !default;
+
+$btn-active-border-color: #bbb !default;
+$btn-active-bgcolor: #bbb !default;
+$btn-active-color: #fff !default;
+
+$btn-padding: .1rem .1rem !default; // todo
+$btn-radius: .04rem !default;
+
+$btn-font-size: .16rem !default;
+$btn-font-weight: null !default;
+$btn-width: null !default;
+$btn-height:null !default;
+
+//primary
+$btn-primary-color: #fff !default;
+$btn-primary-bgcolor: #508cf0 !default;
+//success
+$btn-success-color: #fff !default;
+$btn-success-bgcolor: #19be6b !default;
+
+// samll
+$btn-s-height: .28rem !default;
+$btn-s-font-size: .12rem !default;
+// medium
+$btn-m-height: .36rem !default;
+$btn-m-font-size: .14rem !default;
+// large
+$btn-l-height: .44rem !default;
+$btn-l-font-size: .15rem !default;
