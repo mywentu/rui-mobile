@@ -1,0 +1,55 @@
+@mixin root-scroll($is-scroll : false) {
+  html,
+  body {
+    @if $is-scroll {
+      height: auto;
+      overflow: visible;
+    }
+
+    @else {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+// 解决一样素问题
+@mixin onepx-border($border-color: #666, $border-radius: 0, $border-top-width: 0, $border-right-width: 0, $border-bottom-width: 0, $border-left-width: 0) {
+  & {
+    border: none;
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-top: $border-top-width solid $border-color;
+    border-right: $border-right-width solid $border-color;
+    border-bottom: $border-bottom-width solid $border-color;
+    border-left: $border-left-width solid $border-color;
+    transform-origin: left top;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1) {
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      width: 200%;
+      height: 200%;
+      transform: scale(.5);
+      border-radius: $border-radius * 2;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      width: 300%;
+      height: 300%;
+      transform: scale(.33333);
+      border-radius: $border-radius * 3;
+    }
+  }
+}

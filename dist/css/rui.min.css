@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/**
+ * 框架全局Reset
+ * 重置Mobile及高级浏览器上常见的差异
+ */
+*,
+::before,
+::after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body {
+  margin: 0; }
+
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp {
+  padding: 0;
+  margin: 0; }
+
+input,
+textarea,
+button,
+select,
+pre,
+xmp,
+tt,
+code,
+kbd,
+samp {
+  font-family: inherit;
+  line-height: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+  font-size: inherit; }
+
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+  font-style: normal; }
+
+table {
+  text-align: left;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+ul,
+ol,
+menu {
+  list-style: none; }
+
+fieldset,
+img {
+  vertical-align: middle;
+  border: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "\0020"; }
+
+textarea,
+pre,
+xmp {
+  overflow: auto; }
+
+textarea {
+  resize: vertical; }
+
+input,
+textarea,
+button,
+select a {
+  outline: 0 none; }
+
+input,
+textarea,
+button,
+select {
+  color: inherit; }
+  input:disabled,
+  textarea:disabled,
+  button:disabled,
+  select:disabled {
+    opacity: 1; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+mark {
+  background-color: rgba(0, 0, 0, 0); }
+
+a,
+ins,
+s,
+u,
+del {
+  text-decoration: none; }
+
+a,
+img {
+  -webkit-touch-callout: none; }
+
+.g-clear,
+.g-mod {
+  clear: both; }
+
+/* ------------- */
+/* ==end         */
+/* ------------- */
+/* custom mixin to replace a defined fill color with another one */
+html,
+body {
+  height: auto;
+  overflow: visible; }
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 100px;
+  color: #212121;
+  background-color: #fafafa; }
+
+body {
+  font-family: "Helvetica Neue,Helvetica,STHeiTi,sans-serif";
+  font-size: 14px;
+  line-height: 1.5; }
+
+a {
+  color: #508cf0; }
+
+.rui-btn {
+  display: block;
+  font-size: 0.16rem;
+  outline: none;
+  padding: 0.1rem 0.1rem;
+  color: #4b4b4b;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+  -webkit-border-radius: 0.04rem;
+     -moz-border-radius: 0.04rem;
+          border-radius: 0.04rem;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .rui-btn {
+    border: none;
+    position: relative; }
+  .rui-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    -webkit-transform-origin: left top;
+       -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+         -o-transform-origin: left top;
+            transform-origin: left top; }
+    @media screen and (-webkit-min-device-pixel-ratio: 1) {
+      .rui-btn::after {
+        width: 100%;
+        height: 100%;
+        -webkit-border-radius: 0.04rem;
+           -moz-border-radius: 0.04rem;
+                border-radius: 0.04rem; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      .rui-btn::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+           -moz-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+             -o-transform: scale(0.5);
+                transform: scale(0.5);
+        -webkit-border-radius: 0.08rem;
+           -moz-border-radius: 0.08rem;
+                border-radius: 0.08rem; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      .rui-btn::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+           -moz-transform: scale(0.33333);
+            -ms-transform: scale(0.33333);
+             -o-transform: scale(0.33333);
+                transform: scale(0.33333);
+        -webkit-border-radius: 0.12rem;
+           -moz-border-radius: 0.12rem;
+                border-radius: 0.12rem; } }
+  .rui-btn:active {
+    color: #fff;
+    background-color: #bbb; }
+  .rui-btn-primary {
+    color: #fff;
+    background-color: #508cf0; }
+    .rui-btn-primary:active {
+      color: white;
+      background-color: #96baf6; }
+  .rui-btn-success {
+    color: #fff;
+    background-color: #19be6b; }
+    .rui-btn-success:active {
+      color: white;
+      background-color: #3ee691; }
+  .rui-btn-s {
+    display: inline-block;
+    font-size: 0.12rem; }
+  .rui-btn-disabled {
+    opacity: 1;
+    cursor: not-allowed; }
+    .rui-btn-disabled {
+      border: none;
+      position: relative; }
+    .rui-btn-disabled::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-top: 1px solid #dadada;
+      border-right: 1px solid #dadada;
+      border-bottom: 1px solid #dadada;
+      border-left: 1px solid #dadada;
+      -webkit-transform-origin: left top;
+         -moz-transform-origin: left top;
+          -ms-transform-origin: left top;
+           -o-transform-origin: left top;
+              transform-origin: left top; }
+      @media screen and (-webkit-min-device-pixel-ratio: 1) {
+        .rui-btn-disabled::after {
+          width: 100%;
+          height: 100%;
+          -webkit-border-radius: 0.04rem;
+             -moz-border-radius: 0.04rem;
+                  border-radius: 0.04rem; } }
+      @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        .rui-btn-disabled::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+             -moz-transform: scale(0.5);
+              -ms-transform: scale(0.5);
+               -o-transform: scale(0.5);
+                  transform: scale(0.5);
+          -webkit-border-radius: 0.08rem;
+             -moz-border-radius: 0.08rem;
+                  border-radius: 0.08rem; } }
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        .rui-btn-disabled::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+             -moz-transform: scale(0.33333);
+              -ms-transform: scale(0.33333);
+               -o-transform: scale(0.33333);
+                  transform: scale(0.33333);
+          -webkit-border-radius: 0.12rem;
+             -moz-border-radius: 0.12rem;
+                  border-radius: 0.12rem; } }
+    .rui-btn-disabled, .rui-btn-disabled:active {
+      color: #b1b1b1;
+      background-color: white; }
+
+.rui-icon {
+  display: inline-block;
+  width: .2rem;
+  height: .2rem;
+  vertical-align: middle;
+  background: transparent;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100%;
+       -o-background-size: 100%;
+          background-size: 100%;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+  .rui-icon-loading {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E\a%3Cpath fill='red' d='M16 9.472a1.865 1.865 0 0 1-1.865-1.865V2.011a1.865 1.865 0 0 1 3.73 0v5.596c0 1.03-.835 1.865-1.865 1.865zM16 31.155a1.166 1.166 0 0 1-1.166-1.166v-5.596a1.166 1.166 0 1 1 2.332 0v5.596c0 .644-.522 1.166-1.166 1.166zM11.805 10.48a1.749 1.749 0 0 1-1.516-.875L7.491 4.759A1.75 1.75 0 0 1 10.52 3.01l2.798 4.846a1.75 1.75 0 0 1-1.513 2.624zM22.995 29.164a1.05 1.05 0 0 1-.91-.525l-2.798-4.846a1.049 1.049 0 1 1 1.817-1.049l2.798 4.846a1.049 1.049 0 0 1-.908 1.574zM8.729 13.436c-.277 0-.557-.07-.814-.219l-4.846-2.798a1.631 1.631 0 1 1 1.632-2.826l4.846 2.798a1.631 1.631 0 0 1-.818 3.045zM28.114 23.927a.923.923 0 0 1-.465-.125l-4.846-2.798a.932.932 0 1 1 .933-1.615l4.846 2.798a.932.932 0 0 1-.468 1.74zM7.607 17.515H2.011a1.515 1.515 0 1 1 0-3.03h5.596a1.515 1.515 0 1 1 0 3.03zM29.989 16.933h-5.596a.933.933 0 0 1 0-1.866h5.596a.933.933 0 0 1 0 1.866zM3.886 24.394a1.399 1.399 0 0 1-.701-2.611l4.846-2.798a1.398 1.398 0 1 1 1.399 2.423l-4.846 2.798c-.22.127-.461.188-.698.188zM23.27 12.736a.934.934 0 0 1-.468-1.74l4.846-2.798a.933.933 0 0 1 .933 1.615l-4.846 2.798a.925.925 0 0 1-.465.125zM9.004 29.397a1.283 1.283 0 0 1-1.109-1.924l2.798-4.846a1.283 1.283 0 0 1 2.221 1.283l-2.798 4.846a1.281 1.281 0 0 1-1.112.641zM20.196 9.664a.932.932 0 0 1-.806-1.399l2.798-4.846a.932.932 0 1 1 1.615.933l-2.798 4.846a.932.932 0 0 1-.809.466z'/%3E\a%3C/svg%3E"); }
+  .rui-icon-checkmark {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E\a%3Cpath fill='%23666' d='M27 4L12 19l-7-7-5 5 12 12L32 9z'/%3E\a%3C/svg%3E"); }
+  .rui-icon-ascross {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E\a%3Cpath fill='%23666' d='M31.708 25.708L22 16l9.708-9.708a1 1 0 0 0 0-1.414L27.122.292a1 1 0 0 0-1.414-.001L16 9.999 6.292.291a.998.998 0 0 0-1.414.001L.292 4.878a1 1 0 0 0 0 1.414L10 16 .292 25.708a.999.999 0 0 0 0 1.414l4.586 4.586a1 1 0 0 0 1.414 0L16 22l9.708 9.708a1 1 0 0 0 1.414 0l4.586-4.586a.999.999 0 0 0 0-1.414z'/%3E\a%3C/svg%3E"); }
+  .rui-icon-location {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E\a%3Cpath fill='%23666' d='M16 0C10.477 0 6 4.477 6 10c0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zm0 16a6 6 0 1 1 0-12 6 6 0 0 1 0 12z'/%3E\a%3C/svg%3E"); }
+  .rui-icon-info {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E\a%3Cpath fill='%23666' d='M14 9.5c0-.825.675-1.5 1.5-1.5h1c.825 0 1.5.675 1.5 1.5v1c0 .825-.675 1.5-1.5 1.5h-1c-.825 0-1.5-.675-1.5-1.5v-1zM20 24h-8v-2h2v-6h-2v-2h6v8h2z'/%3E\a%3Cpath fill='%23666' d='M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 29C8.82 29 3 23.18 3 16S8.82 3 16 3s13 5.82 13 13-5.82 13-13 13z'/%3E\a%3C/svg%3E"); }
+
+.rui-loading {
+  width: 20px;
+  height: 20px; }
