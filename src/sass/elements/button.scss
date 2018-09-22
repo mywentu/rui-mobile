@@ -1,44 +1,3 @@
-// 按钮
-//
-//
-// Style guide: 组件.按钮
-
-// 默认按钮
-//
-// Markup:
-// <a class="rui-btn">默认按钮</a>
-//
-// Styleguide 组件.按钮.1
-
-// 禁止按钮
-//
-// Markup:
-// <a class="rui-btn rui-btn-disabled">禁止按钮</a>
-//
-// Styleguide 组件.按钮.2
-
-// Primary按钮
-//
-// Markup:
-// <a class="rui-btn rui-btn-primary">Primary按钮</a>
-//
-// Styleguide 组件.按钮.3
-
-// Success
-//
-// Markup:
-// <a class="rui-btn rui-btn-success">Success按钮</a>
-//
-// Styleguide 组件.按钮.4
-
-// Small
-//
-// Markup:
-// <a class="rui-btn rui-btn-s">Small按钮</a>
-// <a class="rui-btn rui-btn-disabled rui-btn-s">Small按钮</a>
-//
-// Styleguide 组件.按钮.5
-
 .#{$prefix}btn {
   // 此处做了修改，因为rui-btn及可用，不需要个其他class组合使用
   display: block;
@@ -102,3 +61,44 @@
     }
   }
 }
+
+// 按钮
+//
+//
+// Style guide: 组件.按钮
+
+// 默认按钮
+//
+// Markup:
+// <a class="rui-btn">默认按钮</a>
+//
+// Styleguide 组件.按钮.1
+
+// 禁止按钮
+//
+// Markup:
+// <a class="rui-btn rui-btn-disabled">禁止按钮</a>
+//
+// Styleguide 组件.按钮.2
+
+// Primary按钮
+//
+// Markup:
+// <a class="rui-btn rui-btn-primary">Primary按钮</a>
+//
+// Styleguide 组件.按钮.3
+
+// Success
+//
+// Markup:
+// <a class="rui-btn rui-btn-success">Success按钮</a>
+//
+// Styleguide 组件.按钮.4
+
+// Small
+//
+// Markup:
+// <a class="rui-btn rui-btn-s">Small按钮</a>
+// <a class="rui-btn rui-btn-disabled rui-btn-s">Small按钮禁止</a>
+//
+// Styleguide 组件.按钮.5
