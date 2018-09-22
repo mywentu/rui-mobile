@@ -1,0 +1,47 @@
+.#{$prefix}icon {
+  display: inline-block;
+  width: .2rem;
+  height: .2rem;
+  vertical-align: middle;
+  background: transparent;
+  background-size: 100%;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  &-loading {
+    background-image: svg-url-with-replaced-fill($icon-spinner, '#404040', 'red');
+  }
+  &-checkmark {
+    background-image: svg-url($icon-checkmark);
+  }
+  &-ascross {
+    background-image: svg-url($icon-ascross);
+  }
+  &-location {
+    background-image: svg-url($icon-location);
+  }
+  &-info {
+    background-image: svg-url($icon-info);
+  }
+}
+
+// 字体
+// 
+//
+// Style guide: 组件.字体
+// 
+
+// RUI字体
+//
+// 如果需要对icon颜色赋值，可以参考svg-url-with-replaced-fill方法
+// Markup:
+// <ul>
+//  <li><i class="rui-icon rui-icon-loading"></i></li>
+//  <li><i class="rui-icon rui-icon-checkmark"></i></li>
+//  <li><i class="rui-icon rui-icon-ascross"></i></li>
+//  <li><i class="rui-icon rui-icon-location"></i></li>
+//  <li><i class="rui-icon rui-icon-info"></i></li>
+// </ul>
+//
+//
+// Styleguide 组件.字体.1
